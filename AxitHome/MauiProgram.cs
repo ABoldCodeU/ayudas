@@ -43,7 +43,7 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddTransient<LoginPage>();
         mauiAppBuilder.Services.AddTransient<CreateAccountPage>();
         mauiAppBuilder.Services.AddTransient<HomePage>();
-
+        mauiAppBuilder.Services.AddTransient<ReservacionesListPage>();
         return mauiAppBuilder;
     }
 }

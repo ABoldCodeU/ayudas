@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ReservacionesListPage"
+             Title="ReservacionesListPage"
+             xmlns:controls="clr-namespace:AxitHome.Views.Controls"
+             xmlns:helpers="clr-namespace:AxitHome.Helpers"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" x:Name="MainGrid">
+        <ScrollView Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid Margin="24,21,24,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"
+                    Text="Mis Reservaciones"
+                    Margin="40,10,0,10"
+                    Style="{StaticResource LabelTextBold}"
+                    FontSize="25"></Label>
+                <ListView Grid.Row="1" ItemsSource="{Binding Reservas}" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Image Source="{Binding Imagen}" WidthRequest="60" HeightRequest="60" />
+                                    <StackLayout Orientation="Vertical" Spacing="5">
+                                        <Label Text="{Binding Nombre}" FontAttributes="Bold" TextColor="{StaticResource PrimaryTextColor}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Grid.Row="3"
+                     Margin="0,28,0,22"
+                     Text="Nueva Reservación"
+                     Style="{StaticResource Btn-Primary-300}"
+                     Command="{Binding AccederCommand}"></Button>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>
