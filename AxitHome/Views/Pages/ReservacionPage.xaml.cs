@@ -1,9 +1,13 @@
+using AxitHome.ViewModels;
+
 namespace AxitHome.Views.Pages;
 
 public partial class ReservacionPage : ContentPage
 {
-	public ReservacionPage()
+    private readonly ReservacionesListViewModel _viewModel;
+    public ReservacionPage(ReservacionesListViewModel ReservacionesLtsViewModel)
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+        BindingContext = _viewModel = ReservacionesLtsViewModel;
+    }
 }

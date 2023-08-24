@@ -9,17 +9,35 @@
              Shell.TabBarIsVisible="False">
     <Grid HorizontalOptions="Fill" VerticalOptions="Fill" x:Name="MainGrid">
         <ScrollView Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill">
-            <Grid Margin="24,21,24,0">
+            <Grid Margin="5,5,10,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60" />
+                    <RowDefinition Height="70" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0"
-                    Text="Mis Reservaciones"
-                    Margin="40,10,0,10"
-                    Style="{StaticResource LabelTextBold}"
-                    FontSize="25"></Label>
+                <!--  Btn  retroceder  -->
+                <StackLayout
+                     Padding="5,10,5,10"
+                     Orientation="Horizontal"
+                     Spacing="20">
+
+                    <Button
+                         BackgroundColor="Transparent"
+                         Command="{Binding GoBackCommand}"
+                         CornerRadius="25"
+                         FontAttributes="Bold"
+                         FontFamily="FontAwesomeSolid"
+                         FontSize="30"
+                         Text=""
+                         TextColor="#000080"
+                         VerticalOptions="Center" />
+                    <Label
+                         HorizontalOptions="StartAndExpand"
+                         Style="{StaticResource Title2}"
+                         Text="Mis Reservaciones"
+                         VerticalOptions="Center" />
+                </StackLayout>
+
                 <ListView Grid.Row="1" ItemsSource="{Binding Reservas}" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -35,10 +53,10 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <Button Grid.Row="3"
-                     Margin="0,28,0,22"
+                     Margin="10,28,10,22"
                      Text="Nueva Reservación"
                      Style="{StaticResource Btn-Primary-300}"
-                     Command="{Binding AccederCommand}"></Button>
+                     Command="{Binding RegistrarCommand}"></Button>
             </Grid>
         </ScrollView>
     </Grid>

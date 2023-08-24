@@ -18,6 +18,8 @@ public static class MauiProgram
                 fonts.AddFont("Poppins-SemiBold.ttf", "PoppinsSemiBold");
                 fonts.AddFont("Poppins-Regular.ttf", "Poppins");
                 fonts.AddFont("CustomIcon.ttf", "CustomIcon");
+                fonts.AddFont("Font-Awesome-6-Pro-Regular.otf", "FontAwesome");
+                fonts.AddFont("Font-Awesome-6-Pro-Solid.otf", "FontAwesomeSolid");
             }).UseMauiCompatibility();
 
 #if DEBUG
@@ -35,7 +37,7 @@ public static class MauiProgram
 	{
         mauiAppBuilder.Services.AddTransient<LoginPageViewModel>();
         mauiAppBuilder.Services.AddTransient<CreateAccountViewModel>();
-
+        mauiAppBuilder.Services.AddTransient<ReservacionesListViewModel>();
         return mauiAppBuilder;
     }
     public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
@@ -43,7 +45,8 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddTransient<LoginPage>();
         mauiAppBuilder.Services.AddTransient<CreateAccountPage>();
         mauiAppBuilder.Services.AddTransient<HomePage>();
-
+        mauiAppBuilder.Services.AddTransient<ReservacionesListPage>();
+        mauiAppBuilder.Services.AddTransient<ReservacionPage>();
         return mauiAppBuilder;
     }
 }

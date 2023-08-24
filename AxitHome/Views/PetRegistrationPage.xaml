@@ -1,0 +1,101 @@
+<ContentPage
+    x:Class="AxitHome.Views.Pages.PetRegistrationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F5F9FF"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+            <On Platform="Android" Value="10,20,20,10" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Navegacion-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Boton de regreso -->
+            <Button
+                x:Name="BackButton"
+                Grid.Column="0"
+                BackgroundColor="Transparent"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#000080"
+                WidthRequest="60"
+                HeightRequest="60"
+                HorizontalOptions="Start"
+                VerticalOptions="Center" />
+
+
+
+
+
+
+            <!-- titulo -->
+            <Label 
+                Grid.Column="1"
+                Text="Registro de Mascota" 
+                FontSize="24" 
+                VerticalOptions="Center" 
+                HorizontalOptions="StartAndExpand" />
+        </Grid>
+
+        <!-- Contenido -->
+        <Grid Grid.Row="1" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Campos -->
+            <!-- Nombre -->
+            <Label Grid.Row="0" Text="Nombre" TextColor="Blue" />
+            <Frame Grid.Row="1" BackgroundColor="LightGray" CornerRadius="5" Padding="0">
+                <Entry Placeholder="Texto" BackgroundColor="Transparent" />
+            </Frame>
+
+            <!-- Especie -->
+            <Label Grid.Row="2" Text="Especie" TextColor="Blue" />
+            <Frame Grid.Row="3" BackgroundColor="LightGray" CornerRadius="5" Padding="0">
+                <Entry Placeholder="Especie" BackgroundColor="Transparent" />
+            </Frame>
+
+            <!-- Edad -->
+            <Label Grid.Row="4" Text="Edad (años)" TextColor="Blue" />
+            <Frame Grid.Row="5" BackgroundColor="LightGray" CornerRadius="5" Padding="0">
+                <Entry Placeholder="Edad (años)" BackgroundColor="Transparent" Keyboard="Numeric" />
+            </Frame>
+
+
+
+        </Grid>
+
+        
+        <Button 
+            Grid.Row="2"
+            Text="Guardar" 
+            BackgroundColor="#000080" 
+            TextColor="White" />
+    </Grid>
+</ContentPage>
+

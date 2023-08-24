@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:AxitHome.Helpers"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource DefaultEntryBackground}"
+             x:Class="AxitHome.Views.Pages.StaffRecord.StaffRecordPage"
+             Title="StaffRecord">
+    <Grid HorizontalOptions="Fill" 
+          VerticalOptions="Fill"
+          x:Name="MainGrid">
+        <Grid Margin="20,20,20,20" 
+              RowDefinitions="*,*,10*,2*">
+            <Grid ColumnDefinitions="*,10*,*">
+                <Button Text="&#xE19f;"
+                        FontFamily="FontAwesome"
+                        Padding="0"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        Style="{StaticResource Btn-Primary}"/>
+                <Label Text="Personal Registrado"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.Column="1"
+                       FontSize="20"/>
+            </Grid>
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="6*,*">
+                <Border BackgroundColor="White"
+                        Stroke="Transparent"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+                    <Grid ColumnDefinitions="*,10*">
+                        <Label Text="X"
+                               Margin="10,10,10,10"
+                               TextColor="LightGray"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"/>
+                        <Label Text="Buscar"
+                               Grid.Column="1"
+                               Margin="10,10,10,10"
+                               TextColor="LightGray"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Start"/>
+                    </Grid>
+                </Border>
+                <Button Text="X"
+                        Grid.Column="1"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        Padding="0"
+                        Style="{StaticResource Btn-Primary-300}"/>
+            </Grid>
+            <ScrollView Grid.Row="2"
+                        Orientation="Vertical"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        BackgroundColor="Transparent">
+                <Grid RowDefinitions="*,*,*,*">
+                    <Border Grid.Row="0"
+                            Margin="0,10,0,10"
+                            Stroke="Transparent"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30"/>
+                        </Border.StrokeShape>
+                        <Grid ColumnDefinitions="*,2*">
+                            <Border Margin="10,10,10,10"
+                                    Stroke="Transparent"
+                                    HorizontalOptions="Fill"
+                                    VerticalOptions="Fill">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="30"/>
+                                </Border.StrokeShape>
+                                <Image Source="dotnet_bot"
+                                       BackgroundColor="AliceBlue"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"/>
+                            </Border>
+                            <VerticalStackLayout Grid.Column="1"
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="Start">
+                                <Label Text="Airam García"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Start"/>
+                                <Label Text="Limpieza"
+                                       TextColor="LightGray"
+                                       FontAttributes="Bold"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                    <Border Grid.Row="1"
+                            Margin="0,10,0,10"
+                            Stroke="Transparent"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill">     
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="30"/>
+                        </Border.StrokeShape>
+                        <Grid ColumnDefinitions="*,2*">
+                            <Border Margin="10,10,10,10"
+                                    Stroke="Transparent"
+                                    HorizontalOptions="Fill"
+                                    VerticalOptions="Fill">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="30"/>
+                                </Border.StrokeShape>
+                                <Image Source="dotnet_bot"
+                                       BackgroundColor="AliceBlue"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"/>
+                            </Border>
+                            <VerticalStackLayout Grid.Column="1"
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="Start">
+                                <Label Text="Airam García"
+                                       TextColor="Black"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Start"/>
+                                <Label Text="Limpieza"
+                                       TextColor="LightGray"
+                                       FontAttributes="Bold"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </ScrollView>
+            <Grid Grid.Row="3">
+                <Button Text="Registar Personal"
+                        HeightRequest="60"
+                        FontSize="15"
+                        Margin="10,15,10,15"
+                        Style="{StaticResource Btn-Primary-300}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
