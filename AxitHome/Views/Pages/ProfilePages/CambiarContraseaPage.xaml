@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.CambiarContraseaPage"
+             Title="CambiarContraseaPage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Spacing="0">
+        <!--  Sección de Datos Personales  -->
+        <StackLayout
+            Padding="10,10,10,10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <!--  Botón para regresar  -->
+            <Button
+                BackgroundColor="Transparent"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#181f3c"
+                VerticalOptions="Center"
+                Clicked="Button_Back"/>
+            <!--  Título de la página  -->
+            <Label
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource Title2}"
+                Text="Datos Personales"
+                VerticalOptions="Center" />
+        </StackLayout>
+        <StackLayout  Orientation="Vertical">
+            <!--Foto de Perfil-->
+            <Label
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    Text="Cambiar contraseña"
+                    TextColor="#000000"
+                    VerticalTextAlignment="Center" />
+            <Label
+                    x:Name="NameOrEmaillabel"
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Text="Ingresa una nueva contraseña."
+                    TextColor="#777b8a"
+                    VerticalTextAlignment="Center" />
+        </StackLayout>
+
+        <!--  Marco nueva contraseña  -->
+        <Border
+                BackgroundColor="White"
+            Margin="30,30,30,0"
+                HeightRequest="60"
+                HorizontalOptions="FillAndExpand"
+                StrokeThickness="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <!--  Icono  -->
+                <Button
+                        Grid.Column="0"
+                        Margin="0,0,0,0"
+                        Padding="20,0,0,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="Gray" />
+                <!--  Entrada  -->
+                <Entry
+                        Grid.Column="1"
+                        Margin="5,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Text"
+                        Placeholder="Nueva contraseña"
+                        PlaceholderColor="Gray"
+                        ReturnType="Next"
+                        TextColor="Gray"
+                        VerticalOptions="Center" />
+                <Button BackgroundColor="Transparent" Grid.Column="2"
+                        FontFamily="FontAwesome"
+                        FontSize="18" Text=""
+                        TextColor="Gray"/>
+            </Grid>
+        </Border>
+        <!--  Marco para nueva contraseña  -->
+        <Border
+                BackgroundColor="White"
+            Margin="30,30,30,0"
+                HeightRequest="60"
+                HorizontalOptions="FillAndExpand"
+                StrokeThickness="2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <!--  Icono  -->
+                <Button
+                        Grid.Column="0"
+                        Margin="0,0,0,0"
+                        Padding="20,0,0,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="18"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="Gray" />
+                <!--  Entrada  -->
+                <Entry
+                        Grid.Column="1"
+                        Margin="5,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Text"
+                        Placeholder="Nueva contraseña"
+                        PlaceholderColor="Gray"
+                        ReturnType="Next"
+                        TextColor="Gray"
+                        VerticalOptions="Center" />
+                <Button BackgroundColor="Transparent" Grid.Column="2"
+                        FontFamily="FontAwesome"
+                        FontSize="18" Text=""
+                        TextColor="Gray"/>
+            </Grid>
+        </Border>
+        <!--  Btn Cambiar Contrase;a -->
+        <Button
+            Margin="20,20,20,10"
+            Padding="15"
+            HeightRequest="70"
+            BackgroundColor="#181f3c"
+            BorderColor="#181f3c"
+            BorderWidth="1"
+            CornerRadius="20"
+            Text="Cambiar Contraseña"
+            TextColor="White"
+             />
+    </StackLayout>
+</ContentPage>

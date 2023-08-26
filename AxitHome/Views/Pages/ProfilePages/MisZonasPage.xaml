@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.MisZonasPage"
+             Title="MisZonasPage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Spacing="0">
+        <!--  Sección de Mis zonas  -->
+        <StackLayout
+            Padding="10,10,10,10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <!--  Botón para regresar  -->
+            <Button
+                BackgroundColor="Transparent"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#181f3c"
+                VerticalOptions="Center"
+                Clicked="Button_Back"/>
+            <!--  Título de la página  -->
+            <Label
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource Title2}"
+                Text="Mis zonas"
+                VerticalOptions="Center" />
+        </StackLayout>
+        <!--  Sección de Zonas  -->
+        <Grid Margin="0,30,0,0" RowDefinitions="*,*" ColumnDefinitions="*,*">
+            <Image Source="https://expertgolf-logbook-files.s3.amazonaws.com/tfss-10cad4cd-ab18-4fca-9e70-03c3d429b4b3-Central_America_Bosques.png" HeightRequest="100" Grid.Row="0" Grid.RowSpan="2"/>
+            <Label Text="Club de Golf Bosques" Margin="0,20,0,0" Grid.Row="0" Grid.Column="1"  VerticalOptions="Start" TextColor="#090f24"/>
+            <Label Text="Casa Club" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalOptions="Center" TextColor="#bebfc7"/>
+        </Grid>
+        
+        <!--  Btn guardar cambios -->
+        <Button
+            Margin="20,25,20,10"
+            Padding="15"
+            HeightRequest="70"
+            BackgroundColor="#181f3c"
+            BorderColor="#181f3c"
+            BorderWidth="1"
+            CornerRadius="20"
+            Text="Solicitar zonas"
+            TextColor="White"
+            VerticalOptions="CenterAndExpand"
+             />
+    </StackLayout>
+</ContentPage>

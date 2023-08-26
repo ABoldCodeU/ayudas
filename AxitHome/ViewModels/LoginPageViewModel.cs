@@ -1,5 +1,6 @@
 ﻿using AxitHome.ViewModels.Base;
 using AxitHome.Views.Pages;
+using AxitHome.Views.Pages.ProfilePages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,8 +38,8 @@ namespace AxitHome.ViewModels
 
         private async Task Ingresar()
         {
-            await Shell.Current.GoToAsync(nameof(HomePage));
-
+            //await Shell.Current.GoToAsync(nameof(HomePage));
+            await Shell.Current.Navigation.PushAsync(new ProfilePage());
         }
 
         #endregion

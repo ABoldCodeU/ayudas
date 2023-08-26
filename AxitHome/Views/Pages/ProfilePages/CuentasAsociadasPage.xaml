@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.CuentasAsociadasPage"
+             Title="CuentasAsociadasPage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Spacing="0">
+        <!--  Sección de Ceuntas asociadas  -->
+        <StackLayout
+            Padding="10,10,10,10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <!--  Botón para regresar  -->
+            <Button
+                BackgroundColor="Transparent"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#181f3c"
+                VerticalOptions="Center"
+                Clicked="Button_Back"/>
+            <!--  Título de la página  -->
+            <Label
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource Title2}"
+                Text="Cuentas asociadas"
+                VerticalOptions="Center" />
+        </StackLayout>
+        <StackLayout  Orientation="Vertical">
+            <!--Recibir notificaciones-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Recibir notificaciones de cuentas asociadas"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

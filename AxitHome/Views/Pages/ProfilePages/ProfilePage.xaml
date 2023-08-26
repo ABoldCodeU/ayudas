@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.ProfilePage"
+             Title="ProfilePage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+        <StackLayout  Orientation="Vertical">
+            <!--Foto de Perfil-->
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Frame
+                        Margin="0,0,0,0"
+                        BackgroundColor="#d9d9d9"
+                        BorderColor="Transparent"
+                        CornerRadius="100"
+                        HeightRequest="120">
+                    <Image
+                            Margin="0"
+                            Aspect="AspectFill"
+                            HeightRequest="120"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg"
+                            WidthRequest="120" />
+                </Frame>
+                <Button
+                        Grid.Column="1"
+                        Margin="-35,0,0,0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                       
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        Text=""
+                        TextColor="#2a3c66"
+                        VerticalOptions="End" />
+            </Grid>
+            <Label
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    Text="Buk Lasmiye"
+                    TextColor="#000000"
+                    VerticalTextAlignment="Center" />
+            <Label
+                    x:Name="NameOrEmaillabel"
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Text="axithomeuser@gmail.com"
+                    TextColor="#777b8a"
+                    VerticalTextAlignment="Center" />
+        </StackLayout>
+        <ScrollView Grid.Row="2" Margin="0,40,0,0">
+            <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                <!--Datos personales-->
+                <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                    <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Datos personales"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                    <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapDatosPersonales" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <!--Mis Zonas-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                        <Label
+                            FontAttributes="Bold"
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Mis zonas"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapMiszonas" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--Cuentas asociadas-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                        <Label
+                            FontAttributes="Bold"
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Cuentas asociadas"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                            
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapCuentasAsociadas" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--Notificacioness-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Notificaciones"
+                            FontAttributes="Bold"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapNotificaciones" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--Cambiar contraseña-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Cambiar contraseña"
+                            FontAttributes="Bold"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapCambiarContrasea" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--Acerca de-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#2a3c66" />
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Acerca de"
+                            FontAttributes="Bold"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <Button
+                        Margin="0,0,8,0"
+                        BackgroundColor="Transparent"
+                        FontFamily="FontAwesome"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#bebfc7"
+                        VerticalOptions="Center" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapAcercade" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--Cerrar sesion-->
+                <StackLayout Margin="0,0,0,0" Orientation="Vertical">
+                    <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                        <Button
+                        BackgroundColor="Transparent"
+                        Padding="0"
+                        FontFamily="FontAwesomeSolid"
+                        FontSize="24"
+                        IsEnabled="False"
+                        Text=""
+                        TextColor="#ff4c4c" />
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Cerrar sesión"
+                            FontAttributes="Bold"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapCerrarSesion" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

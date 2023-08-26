@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.OTPVerificationPage"
+             Title="OTPVerificationPage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Spacing="0">
+        <!--  Sección de OTP Verification  -->
+        <StackLayout
+            Padding="10,10,10,10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <!--  Botón para regresar  -->
+            <Button
+                BackgroundColor="Transparent"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#181f3c"
+                VerticalOptions="Center"
+                Clicked="Button_Back"/>
+
+        </StackLayout>
+        <StackLayout  Orientation="Vertical" Margin="0,100,0,0">
+            <Label
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    Text="Código de verificación"
+                    TextColor="#000000"
+                    VerticalTextAlignment="Center" />
+            <Label
+                    Margin="0,10,0,0"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Text="El código de verificación de se ha eviado por email"
+                    TextColor="#777b8a"
+                    VerticalTextAlignment="Center" />
+        </StackLayout>
+
+        <Grid ColumnDefinitions="*,*,*,*" Margin="10,20,10,0">
+            <Border HeightRequest="55" BackgroundColor="Transparent" Margin="0,0,0,0" WidthRequest="70" Stroke="#2a3c66" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Label Text="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Border>
+            <Border Grid.Column="1" HeightRequest="55" BackgroundColor="Transparent" Margin="0,0,0,0" WidthRequest="70" Stroke="#2a3c66" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Label Text="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Border>
+            <Border Grid.Column="2" HeightRequest="55" BackgroundColor="Transparent" Margin="0,0,0,0" WidthRequest="70" Stroke="#2a3c66" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Label Text="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Border>
+            <Border Grid.Column="3" HeightRequest="55" BackgroundColor="Transparent" Margin="0,0,0,0" WidthRequest="70" Stroke="#2a3c66" StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Label Text="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </Border>
+        </Grid>
+        <Label
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    Text="Enviar nuevamente"
+                    TextColor="#0a0d14"
+                    VerticalTextAlignment="Center" />
+        <!--  Btn Cambiar Contrase;a -->
+        <Button
+            Margin="20,20,20,10"
+            Padding="15"
+            HeightRequest="70"
+            BackgroundColor="#181f3c"
+            BorderColor="#181f3c"
+            BorderWidth="1"
+            CornerRadius="20"
+            Text="Cambiar Contraseña"
+            TextColor="White"
+             />
+    </StackLayout>
+</ContentPage>

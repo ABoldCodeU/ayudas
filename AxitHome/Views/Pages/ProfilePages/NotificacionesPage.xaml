@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AxitHome.Views.Pages.ProfilePages.NotificacionesPage"
+             Title="NotificacionesPage"
+             NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="false">
+    <StackLayout Spacing="0">
+        <!--  Sección de Notificaciones  -->
+        <StackLayout
+            Padding="10,10,10,10"
+            Orientation="Horizontal"
+            Spacing="20">
+            <!--  Botón para regresar  -->
+            <Button
+                BackgroundColor="Transparent"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontFamily="FontAwesomeSolid"
+                FontSize="30"
+                Text=""
+                TextColor="#181f3c"
+                VerticalOptions="Center"
+                Clicked="Button_Back"/>
+            <!--  Título de la página  -->
+            <Label
+                HorizontalOptions="StartAndExpand"
+                Style="{StaticResource Title2}"
+                Text="Notificaciones"
+                VerticalOptions="Center" />
+        </StackLayout>
+        <StackLayout  Orientation="Vertical">
+            <!--General Notifications-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="General Notifications"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            <!--Sound-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Sound"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            <!--Vibrate-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Vibrate"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            <!--App Update-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="App Update"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            <!--Payment-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Payment"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+            <!--Promo & Discount-->
+            <StackLayout
+                    Margin="20,0,20,0"
+                    Padding="0"
+                    Orientation="Horizontal">
+                <Label
+                        Margin="20,0,0,0"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Promo &amp; Discount"
+                        TextColor="#777b8a"
+                        VerticalOptions="CenterAndExpand" />
+                <Switch IsToggled="True" OnColor="#181f3c" ThumbColor="Gray"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
